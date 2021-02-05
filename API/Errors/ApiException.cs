@@ -9,8 +9,8 @@ namespace API.Errors
             Details = details;
         }
 
-        public int StatusCode { get; init; }
-        public string Message { get; init; }
-        public string Details { get; init; }
+        public int StatusCode { get; set; }
+        public string Message { get; set; }
+        public string Details { get; set; }
     }
 }
