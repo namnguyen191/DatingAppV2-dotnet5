@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [],
@@ -13,7 +14,8 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
       positionClass: 'toast-bottom-right',
     }),
     NgxGalleryModule,
+    NgxSpinnerModule,
   ],
-  exports: [NgbModule, ToastrModule, NgxGalleryModule],
+  exports: [NgbModule, ToastrModule, NgxGalleryModule, NgxSpinnerModule],
 })
 export class SharedModule {}

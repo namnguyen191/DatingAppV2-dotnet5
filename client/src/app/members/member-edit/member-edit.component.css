@@ -1,0 +1,29 @@
+.img-thumbnail {
+  margin: 25px;
+  width: 85%;
+  height: 85%;
+}
+
+.card-body {
+  padding: 0 25px;
+}
+
+.card-footer {
+  padding: 10px 15px;
+  background-color: #fff;
+  border-top: none;
+}
+
+.member-tabset {
+  border-bottom: none !important;
+}
+.member-tabset li a {
+  border-bottom: 2px solid orange;
+}
+.member-tabset > li .active {
+  border-bottom: none;
+  border-top: 4px solid orange;
+  border-left: 4px solid orange;
+  border-right: 4px solid orange;
+  font-weight: bold;
+}
