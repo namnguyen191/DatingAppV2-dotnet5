@@ -17,6 +17,7 @@ namespace API.Extensions
             services.AddScoped<IPhotoService, PhotoService>();
             services.AddScoped<LogUserActivity>();
             services.AddScoped<ILikesRepository, LikesRepository>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
             // Since the services is being used in an HTTP request, AddScoped is the most appropriate
             // cause it will dispose of the service when the request is finished
             services.AddScoped<ITokenService, TokenService>();

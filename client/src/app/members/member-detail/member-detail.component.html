@@ -24,7 +24,7 @@
             <div class="card-footer">
                 <div class="btn-group d-flex">
                     <button class="btn btn-primary">Like</button>
-                    <button class="btn btn-success">Message</button>
+                    <button class="btn btn-success" (click)="selectTab('messages')">Message</button>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
             <li [ngbNavItem]="'messages'">
                 <a ngbNavLink>Messages</a>
                 <ng-template ngbNavContent>
-                    <p>Messages will go here</p>
+                    <app-member-messages [username]="member.username"></app-member-messages>
                 </ng-template>
             </li>
         </ul>

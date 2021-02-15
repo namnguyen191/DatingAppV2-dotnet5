@@ -28,6 +28,10 @@ export class MemberDetailComponent implements OnInit {
   ngOnInit(): void {
     this.loadMember();
 
+    this.route.queryParams.subscribe((params) => {
+      params.tab ? this.selectTab(params.tab) : this.selectTab('about');
+    });
+
     this.galleryOptions = [
       {
         width: '500px',
@@ -60,5 +64,9 @@ export class MemberDetailComponent implements OnInit {
         this.member = member;
         this.galleryImages = this.getImages();
       });
+  }
+
+  selectTab(tabName: string) {
+    this.active = tabName;
   }
 }
