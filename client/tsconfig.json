@@ -16,6 +16,7 @@
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
-    "enableIvy": false
+    "enableIvy": false,
+    "strictTemplates": true
   }
 }
