@@ -78,7 +78,6 @@ export class MembersService {
         return arr.concat(elem.result);
       }, [])
       .find((member: Member) => member.username === username);
-    console.log(member);
 
     if (member) {
       return of(member);
