@@ -1,6 +1,6 @@
-import { group } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import * as signalR from '@microsoft/signalr';
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 import { BehaviorSubject } from 'rxjs';
 import { take } from 'rxjs/operators';
@@ -26,6 +26,8 @@ export class MessageService {
     this.hubConnection = new HubConnectionBuilder()
       .withUrl(this.hubUrl + 'message?user=' + otherUsername, {
         accessTokenFactory: () => user.token,
+        skipNegotiation: true,
+        transport: signalR.HttpTransportType.WebSockets,
       })
       .withAutomaticReconnect()
       .build();
